@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Logo from '../../../theme/Logo'
 import { Button } from '../Button';
+import Text from '../../foundation/Text'
+
 const MenuWrapper = styled.nav`
   font-family: 'Rubik', 'sans-serif';
   display: flex;
@@ -79,7 +81,9 @@ export default function Menu (){
           {links.map( link => {
               return (
                   <li key={link.url} >
-                      <a href={link.url}>{link.texto}</a>
+                      <Text tag="a" variant="smallestException" href={link.url}>
+                        {link.texto}
+                      </Text>
                   </li>
               )
           })}

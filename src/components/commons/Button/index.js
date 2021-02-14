@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { get } from 'lodash';
-
+import { TextStyleVariants } from '../../foundation/Text';
 
 const ButtonDefault = css`
     background-color : ${(props) =>{
@@ -16,6 +16,7 @@ const ButtonGhost = css`
      color : ${(props) => {
         return get(props.theme, `colors.${props.variant}.color`)
     }};
+   
 `;
 
 export const Button = styled.button`
@@ -36,5 +37,6 @@ export const Button = styled.button`
     &:focus {
         opacity: .5;
     }
+    ${TextStyleVariants.smallestExceptionBold}
 
 `;
