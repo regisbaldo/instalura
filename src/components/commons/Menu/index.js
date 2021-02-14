@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from '../../../themes/Logo'
+import Logo from '../../../theme/Logo'
+import { Button } from '../Button';
+import Text from '../../foundation/Text'
+
 const MenuWrapper = styled.nav`
   font-family: 'Rubik', 'sans-serif';
   display: flex;
@@ -50,7 +53,7 @@ MenuWrapper.CentralSide = styled.div`
 MenuWrapper.RightSide = styled.div`
   padding: 0;
   margin: 1px;
-  order: 3;
+  order: 2;
 `;
 
 const links =[
@@ -77,15 +80,17 @@ export default function Menu (){
       <MenuWrapper.CentralSide>
           {links.map( link => {
               return (
-                  <li>
-                      <a href={link.url}>{link.texto}</a>
+                  <li key={link.url} >
+                      <Text tag="a" variant="smallestException" href={link.url}>
+                        {link.texto}
+                      </Text>
                   </li>
               )
           })}
       </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-          <button>Entrar</button>
-          <button>Cadastrar</button>
+          <Button ghost variant="secondary.main">Entrar</Button>
+          <Button variant="primary.main">Cadastrar</Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
   )
