@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { get } from 'lodash';
 import { TextStyleVariants } from '../../foundation/Text';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const ButtonDefault = css`
     background-color : ${(props) =>{
@@ -38,5 +39,16 @@ export const Button = styled.button`
         opacity: .5;
     }
     ${TextStyleVariants.smallestExceptionBold}
+
+    ${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariants.smallestException}
+    `,
+    md: css`
+      padding: 12px 43px;
+      ${TextStyleVariants.paragraph1}
+    `,
+  })}
+
 
 `;
