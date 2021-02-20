@@ -22,6 +22,7 @@ const ButtonGhost = css`
 `;
 
 export const Button = styled.button`
+
     border: 0;
     cursor: pointer;
     padding: 12px 26px;
@@ -47,6 +48,7 @@ export const Button = styled.button`
 
     ${propToStyle('margin')}
     ${propToStyle('display')}
+
     
     ${function (props) {
         if (props.ghost) {
@@ -54,5 +56,6 @@ export const Button = styled.button`
         }
         return ButtonDefault;
     }}
+    ${propToStyle("paddingTop")}
 
 `;
