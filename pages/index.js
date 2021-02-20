@@ -1,10 +1,10 @@
-import React from 'react'
-import Footer from '../src/components/commons/Footer'
-import Menu from '../src/components/commons/Menu'
-import { Text } from '../src/components/foundation/Text'
-import { Button } from '../src/components/commons/Button'
-import {Grid} from '../src/components/foundation/layout/Grid'
-import {Box} from '../src/components/foundation/Box'
+import React from 'react';
+import Footer from '../src/components/commons/Footer';
+import Menu from '../src/components/commons/Menu';
+import { Text } from '../src/components/foundation/Text';
+import { Button } from '../src/components/commons/Button';
+import { Grid } from '../src/components/foundation/layout/Grid';
+import { Box } from '../src/components/foundation/Box';
 
 export default function Home() {
   return (
@@ -18,13 +18,14 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
-    <Menu />
+      <Menu />
 
-    <Grid.Container
-    marginTop={{
-      xs: "32px",
-      md: "75px",
-    }}>
+      <Grid.Container
+        marginTop={{
+          xs: '32px',
+          md: '75px',
+        }}
+      >
         <Grid.Row>
           <Grid.Col
             offset={{ xs: 0, md: 1 }}
@@ -72,18 +73,19 @@ export default function Home() {
                 Cadastrar
               </Button>
             </div>
-            </Grid.Col>
+          </Grid.Col>
           <Grid.Col
             value={{ xs: 12, md: 6 }}
           >
             <img
+              alt="Pode ser uma imagem de celular com o cage"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>
-    <Footer />
+      <Footer />
     </Box>
-  )
+  );
 }
