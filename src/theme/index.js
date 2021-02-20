@@ -53,5 +53,6 @@ export const colors = {
     typographyVariants,
     breakpoints,
     borderRadius: '8px',
+    fontFamily: '\'Rubik\', sans-serif',
     transition: '200ms ease-in-out',
   }; 

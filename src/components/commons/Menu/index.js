@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../../../theme/Logo'
 import { Button } from '../Button';
-import Text from '../../foundation/Text'
+import {Text} from '../../foundation/Text'
 import {MenuWrapper} from '../Menu/MenuWrapper'
 
 
