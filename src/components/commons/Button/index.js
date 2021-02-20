@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 import { get } from 'lodash';
 import { TextStyleVariants } from '../../foundation/Text';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import { propToStyle } from '../../../theme/utils/propToStyle';
 
 const ButtonDefault = css`
     background-color : ${(props) =>{
@@ -20,23 +22,40 @@ const ButtonGhost = css`
 `;
 
 export const Button = styled.button`
+
     border: 0;
     cursor: pointer;
     padding: 12px 26px;
     font-weight: bold;
     opacity: 1;
-    ${function (props) {
-        if (props.ghost) {
-            return ButtonGhost;
-        }
-        return ButtonDefault;
-    }}
+   
     transition: opacity ${({theme}) => theme.transition};
     border-radius:${({theme}) => theme.borderRadius};
     &:hover,
     &:focus {
         opacity: .5;
     }
-    ${TextStyleVariants.smallestExceptionBold}
+
+    ${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariants.smallestException}
+    `,
+    md: css`
+      padding: 12px 43px;
+      ${TextStyleVariants.paragraph1}
+    `,
+    })}
+
+    ${propToStyle('margin')}
+    ${propToStyle('display')}
+
+    
+    ${function (props) {
+        if (props.ghost) {
+            return ButtonGhost;
+        }
+        return ButtonDefault;
+    }}
+    ${propToStyle("paddingTop")}
 
 `;
