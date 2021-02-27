@@ -20,19 +20,20 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
-      {isModalOpen
-        && (
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => { setModalState(false); }}
-        >
-          {(modalProps) => (
-            <Box {...modalProps}>
-              Olha eu aqui
-            </Box>
-          )}
-        </Modal>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => { setModalState(false); }}
+      >
+        {(modalProps) => (
+          <Box
+            backgroundColor="white"
+              // eslint-disable-next-line react/jsx-props-no-spreading
+            {...modalProps}
+          >
+            <div>Olha eu aqui</div>
+          </Box>
         )}
+      </Modal>
       <Menu />
 
       <Grid.Container
