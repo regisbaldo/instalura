@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
-import { propToStyle } from "../../../../theme/utils/propToStyle";
+import { propToStyle } from '../../../../theme/utils/propToStyle';
 
 const Container = styled.div`
 width: 100%;
@@ -9,28 +9,28 @@ padding-left: 28px;
 margin-right: auto;
 margin-left: auto;
 ${breakpointsMedia({
-xs: css`
+    xs: css`
   max-width: initial;
 
   padding-right: 28px;
   padding-left: 28px;
 `,
-sm: css`
+    sm: css`
   max-width: 576px; 
 `,
-md: css`
+    md: css`
   max-width: 768px;
   padding-right: 16px;
   padding-left: 16px; 
 `,
-lg: css`
+    lg: css`
   max-width: 1160px; 
 `,
-xl: css`
+    xl: css`
   max-width: 1222px;
 `,
-})}
-${propToStyle("marginTop")}
+  })}
+${propToStyle('marginTop')}
 `;
 
 const Row = styled.div`
@@ -38,6 +38,10 @@ const Row = styled.div`
     flex-wrap: wrap;
     margin-right: -16px;
     margin-left: -16px;
+    ${propToStyle('flex')}
+    ${propToStyle('marginLeft')}
+    ${propToStyle('marginRight')}
+    ${propToStyle('justifyContent')}
   `;
 const Col = styled.div`
   padding-right: 16px;
@@ -119,12 +123,13 @@ const Col = styled.div`
       }),
     });
   }}
-    ${propToStyle("display")}
-    ${propToStyle("alignItems")}
-    ${propToStyle("justifyContent")}
-    ${propToStyle("flexDirection")}
-    ${propToStyle("paddingTop")}
-    ${propToStyle("paddingBottom")}
+    ${propToStyle('display')}
+    ${propToStyle('alignItems')}
+    ${propToStyle('justifyContent')}
+    ${propToStyle('flexDirection')}
+    ${propToStyle('paddingTop')}
+    ${propToStyle('paddingBottom')}
+    ${propToStyle('paddingRight')}
 `;
 
 Col.defaultProps = {
@@ -132,12 +137,8 @@ Col.defaultProps = {
   offset: {},
 };
 
-
-
-
-
 export const Grid = {
   Container,
   Row,
   Col,
-}; 
+};
