@@ -33,4 +33,4 @@ jobs:
       - name: Instalar dependencias
         run: npm install
       - name: Run linter!
-        run: npm run linte
+        run: npm run lint
