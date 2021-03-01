@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "export": "next build && export",
-    "start": "next start"
+    "start": "next start",
+    "lint" : "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "@crello/react-lottie": "0.0.11",
@@ -28,5 +29,5 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0"
   },
-  "license": "MIT"
+  "licensehp ar": "MIT"
 }
