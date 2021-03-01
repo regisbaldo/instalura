@@ -24,7 +24,7 @@ jobs:
       ####colocando a versão que queremos do node
       - uses: actions/setup-node@v1
         with:
-          node-version: "14.45.0"
+          node-version: '14.15.0'
        ################################################ 
       # Runs a single command using the runners shell
       - name: Show node version
