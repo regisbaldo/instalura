@@ -30,7 +30,7 @@ jobs:
       - name: Show node version
         run: node -v 
         
-       - name: Instalar dependencias
+      - name: Instalar dependencias
         run: npm install
       - name: Run linter!
         run: npm linter
