@@ -50,7 +50,7 @@ export const Button = styled.button`
     ${propToStyle('display')}
 
     
-    ${function (props) {
+    ${(props) => {
     if (props.ghost) {
       return ButtonGhost;
     }
