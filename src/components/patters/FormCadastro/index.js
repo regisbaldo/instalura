@@ -40,8 +40,8 @@ function FormContent() {
       setSubmissionSatus(formStates.LOADING);
 
       const userDTO = {
-        name: setUserInfo.nome,
-        username: setUserInfo.usuario,
+        name: userInfo.nome,
+        username: userInfo.usuario,
       };
       fetch('https://instalura-api.vercel.app/api/users', {
         method: 'POST',
