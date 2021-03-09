@@ -40,25 +40,21 @@ function FormContent() {
       setSubmissionSatus(formStates.LOADING);
 
       const userDTO = {
-        nome: setUserInfo.nome,
-        username: setUserInfo.usuario,
+        name: userInfo.nome,
+        username: userInfo.usuario,
       };
       fetch('https://instalura-api.vercel.app/api/users', {
         method: 'POST',
         headers: {
-          'Contet-Type': 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(userDTO),
       })
-        .then((respostaDoServidor) => {
-          if (respostaDoServidor.ok) {
-            return respostaDoServidor.json();
-          }
-        })
-        .then((respostaDoServidorEmObjeto) => {
+        .then((respostaDoServidor) => respostaDoServidor.json())
+        .then(() => {
           setSubmissionSatus(formStates.DONE);
         })
-        .catch((error) => {
+        .catch(() => {
           setSubmissionSatus(formStates.ERROR);
         });
     }}

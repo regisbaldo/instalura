@@ -31,4 +31,4 @@ export function propToStyle(propName) {
       [propName]: props[propName],
     };
   };
-} 
+}
