@@ -7,9 +7,11 @@ import { Grid } from '../src/components/foundation/layout/Grid';
 import { Box } from '../src/components/foundation/Box';
 import Modal from '../src/components/commons/Modal';
 import FormCadastro from '../src/components/patters/FormCadastro';
+import SEO from '../src/components/commons/SEO';
 
 export default function Home() {
   const [isModalOpen, setModalState] = React.useState(false);
+
   return (
     <Box
       flex="1"
@@ -21,6 +23,7 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
+      <SEO headTitle="Home" />
       <Modal
         isOpen={isModalOpen}
         onClose={() => { setModalState(false); }}
