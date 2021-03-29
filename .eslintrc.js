@@ -2,9 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'cypress/globals': true,
+
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:cypress/recommended',
     'airbnb',
   ],
   parserOptions: {
