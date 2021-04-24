@@ -1,6 +1,6 @@
 import { typographyVariants } from './typographyVariants';
 
-export const colors = {
+const colors = {
   background: {
     light: {
       color: '#FFFFFF',
@@ -36,11 +36,23 @@ export const colors = {
       contrastText: '#fff',
     },
   },
+  // Feedback colors
+  error: {
+    main: {
+      color: '#dc3545',
+      contrastText: '#fff',
+    },
+  },
+  success: {
+    main: {
+      color: '#28a745',
+      contrastText: '#fff',
+    },
+  },
   modes: {
     dark: {},
   },
 };
-
 export const breakpoints = {
   xs: 0,
   sm: 480,
