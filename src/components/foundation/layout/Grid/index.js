@@ -45,6 +45,9 @@ const Row = styled.div`
     ${propToStyle('marginBottom')}
     ${propToStyle('marginTop')}
     ${propToStyle('flexDirection')}
+    ${propToStyle('display')}
+    ${propToStyle('flex')}
+    ${propToStyle('alignItems')}
   `;
 const Col = styled.div`
   padding-right: 16px;
