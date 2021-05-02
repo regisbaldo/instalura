@@ -1,7 +1,7 @@
 import React from 'react';
-import * as yup from 'yup';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
+import * as yup from 'yup';
 import { Button } from '../../commons/Button';
 import TextField from '../../forms/TextField';
 import { useForm } from '../../../infra/hooks/useForm';
@@ -24,6 +24,7 @@ export default function LoginForm({ onSubmit }) {
     usuario: '',
     senha: '',
   };
+
   const form = useForm({
     initialValues,
     onSubmit: (values) => {
@@ -34,7 +35,10 @@ export default function LoginForm({ onSubmit }) {
       })
         .then(() => {
           router.push('/app/profile');
-        }).catch(() => {
+        })
+        .catch((err) => {
+          // Desafio: Mostrar o erro na tela
+          console.error(err);
         })
         .finally(() => {
           form.setIsFormDisabled(false);
@@ -53,9 +57,9 @@ export default function LoginForm({ onSubmit }) {
         placeholder="Usuário"
         name="usuario"
         value={form.values.usuario}
-        onChange={form.handleChange}
         error={form.errors.usuario}
         isTouched={form.touched.usuario}
+        onChange={form.handleChange}
         onBlur={form.handleBlur}
       />
       <TextField
@@ -65,8 +69,8 @@ export default function LoginForm({ onSubmit }) {
         value={form.values.senha}
         error={form.errors.senha}
         isTouched={form.touched.senha}
-        onBlur={form.handleBlur}
         onChange={form.handleChange}
+        onBlur={form.handleBlur}
       />
 
       <Button

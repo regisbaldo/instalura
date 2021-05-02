@@ -55,6 +55,7 @@ export function useForm({
       }));
     },
     isFormDisabled,
+    setIsFormDisabled,
     errors,
     touched,
     handleBlur(event) {
